@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Authors>Matěj "lofcz" Štágl</Authors>
+        <Copyright>Matěj "lofcz" Štágl</Copyright>
+        <PackageProjectUrl>https://github.com/lofcz/birthnumber</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/lofcz/birthnumber/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/lofcz/birthnumber</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>birthnumber;validator;czechbirth number</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+</Project>
