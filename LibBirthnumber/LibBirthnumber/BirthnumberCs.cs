@@ -160,13 +160,19 @@ public partial class BirthnumberCs
     /// <summary>
     /// Attempts to parse given string into a birth number.
     /// </summary>
-    /// <param name="s">String to parse</param>
+    /// <param name="str">String to parse</param>
     /// <param name="birthNumber">Output</param>
     /// <returns></returns>
-    public static bool TryParse(string s, [NotNullWhen(true)] out BirthnumberCs? birthNumber)
+    public static bool TryParse(string? str, [NotNullWhen(true)] out BirthnumberCs? birthNumber)
     {
-        Match match = Validate.Match(s.Trim());
         birthNumber = null;
+        
+        if (str is null)
+        {
+            return false;
+        }
+        
+        Match match = Validate.Match(str.Trim());
 
         if (!match.Success)
         {
@@ -177,6 +183,16 @@ public partial class BirthnumberCs
         birthNumber = parsed;
 
         return parsed.CheckChecksum() && parsed.CheckDate();
+    }
+
+    /// <summary>
+    /// Checks whether given input is a valid birth number.
+    /// </summary>
+    /// <param name="birthNumber"></param>
+    /// <returns></returns>
+    public static bool Valid(string birthNumber)
+    {
+        return TryParse(birthNumber, out BirthnumberCs? _);
     }
 
     [GeneratedRegex("^([0-9]{6})/?([0-9]{3,4})$", RegexOptions.Compiled)]

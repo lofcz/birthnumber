@@ -13,6 +13,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>birthnumber;validator;czechbirth number</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
 </Project>
